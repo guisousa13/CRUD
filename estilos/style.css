@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-image: url(../imagens/pngtree-audio-or-music-purple-shiny-sound-waveform-with-triangular-light-filter-image_1103146.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    text-shadow: black 2px 5px;
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    font-size: 30px;
+    color: #ccc;
+    text-align: center;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .menu a {
+    background-color: #6A5ACD;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: "Combo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .menu a:hover {
+    background-color: #836FFF;
+    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }

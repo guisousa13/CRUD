@@ -6,26 +6,35 @@
 
 body {
     min-height: 100vh;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../imagens/pngtree-audio-or-music-purple-shiny-sound-waveform-with-triangular-light-filter-image_1103146.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: "Combo", sans-serif;
+    justify-content: center;
+    padding: 2rem;
     position: relative;
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Vídeo cobrindo toda a tela */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Adicionando um leve overlay para contraste */
 body::before {
     content: '';
     position: fixed;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6); 
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
 

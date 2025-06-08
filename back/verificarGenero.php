@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2022/02/11/107465-678258871_large.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+    </video>
+
     <header>
         <nav>
             <ul>

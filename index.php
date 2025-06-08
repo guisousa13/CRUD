@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="incialPage">Sistema de criação de playlist</h1>
+    <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2022/02/10/107312-676158779_large.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+    </video>
+
+    <h1 id="incialPage">CRIE A SUA PLAYLIST</h1>
     <p>Para começar escolha uma das opções abaixo:</p>
 
     <div class="menu">

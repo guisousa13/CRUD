@@ -23,7 +23,7 @@
     </header>
     <main>
         <section id="containerSection">
-            <form action="atualizarCadastro.php" method="post">
+            <form action="atualizarArtista.php" method="post">
                 <p>Aqui você pode atualizar o as informações das suas playlists ou do seu artista favorito. <br>Informe o nome do artista</p>
                 <input type="text" placeholder="Informe o nome do artista:" name="artista" id="artista">
                 <input type="submit" value="Buscar">
@@ -59,30 +59,35 @@
                             //Armazenar as informações vindas do DB
                             $row = $resultado->fetch_assoc();
                             echo "
-                            <form action='processaCadastro.php' method='post' id='form-cadastro'>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Artista</th>
-                                            <th>Nome da Música</th>
-                                            <th>Álbum</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <td>{$row['id']}</td>
-                                        <td>{$row['artista']}</td>
-                                        <td>
-                                            <input type='string' name='nome[{$row['id']}]' required> 
-                                        </td>
-                                        <td>
-                                            <input type='string' name='album[{$row['id']}]' required> 
-                                        </td>
-                                    </tbody>
-                                </table>
+                                <div class='container-tabela'>
+                                    <form action='processaCadastro.php' method='post' id='form-cadastro'>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Artista</th>
+                                                    <th>Nome da Música</th>
+                                                    <th>Álbum</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>{$row['id']}</td>
+                                                    <td>{$row['artista']}</td>
+                                                    <td>
+                                                        <input type='text' name='nome[{$row['id']}]' required> 
+                                                    </td>
+                                                    <td>
+                                                        <input type='text' name='album[{$row['id']}]' required> 
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <input type='submit' value='Enviar'>
+                                    </form>
+                                </div>
                                 ";
-                                echo "<input type='submit' value='Enviar'>
-                                </form>";
+
                     }else {
                         echo "<div class='mensagem erro'> Artista $artista não encontrado </div>";
                         }

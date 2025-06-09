@@ -1,26 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    background-color: #f2f2f2;
-}
-h1 {
-    color: #333;
-}
-.menu {
-    display: inline-block;
-    margin-top: 30px;
-}
-.menu a {
-    display: block;
-    padding: 15px 30px;
-    margin: 10px;
-    background-color: #007bff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  
+  }
+  
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+ @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin-bottom: 1rem;
     color: white;
+    text-align: center;
+    text-shadow: black 2px 5px;
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .menu a {
+    background-color: #6A5ACD;
+    color: #fff;
     text-decoration: none;
+    padding: 1rem;
     border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: "Combo", system-ui;
+    font-weight: 400;
+    font-style: normal;
     font-size: 18px;
-}
-.menu a:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  .menu a:hover {
+    background-color: #836FFF;
+    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }

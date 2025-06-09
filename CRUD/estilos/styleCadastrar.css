@@ -1,20 +1,52 @@
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eef;
     margin: 0;
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); 
+    z-index: -1;
+}
 
 header {
-    background-color: #007bff;
+    background-color: #BA55D3;
     padding: 10px 0;
     color: white;
+    font-family: "Combo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    font-size: 20px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -30,44 +62,56 @@ nav ul li a {
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 5px;
-    transition: background 0.3s;
-}
-nav ul li a:hover {
-    background-color: #0056b3;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #BA55D3;
+    box-shadow: 0 0 10px #BA55D3, 0 0 20px #BA55D3;
+}
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 10px); 
     padding: 20px;
 }
 
-
 form {
-    background: white;
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.26);
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px #aaa;
 }
 
 h2 {
+    font-size: 50px;
+    color: white;
     text-align: center;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 10px;
 }
 
 label {
     display: block;
     margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: "Combo", system-ui;
+    font-style: normal;
+    color: #fff;
 }
 
 input[type="text"],
-input[type="email"],
+input[type="date"],
 select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -77,15 +121,17 @@ input[type="submit"] {
     margin-top: 20px;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #D8BFD8;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #7a4fc2;
 }
 
 .mensagem {
@@ -104,4 +150,10 @@ input[type="submit"]:hover {
 .erro {
     background-color: #f8d7da;
     color: #721c24;
+}
+
+/* Efeito de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
 }

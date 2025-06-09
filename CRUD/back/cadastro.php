@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Música</title>
     <link rel="stylesheet" href="../estilos/styleCadastrar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+    
 </head>
 <body>
+
+    <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2022/02/11/107465-678258871_large.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+    </video>
 
     <header>
         <nav>
             <ul>
-                <li><a href="../index.php">Início</a></li>
-                <li><a href="">Cadastrar Usuário</a></li>
-                <li><a href="verificarCadastro.php">Listas Usuários</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="cadastro.php">Registrar Músicas</a></li>
+                <li><a href="verificarRegistro.php">Verificar Playlists</a></li>
+                <li><a href="atualizarArtista.php">Atualizar Playlists</a></li>
+                <li><a href="verificarGenero.php">Consulta por gênero</a></li>
             </ul>
         </nav>
     </header>
@@ -88,5 +100,6 @@
         }
             ?>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

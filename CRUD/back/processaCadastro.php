@@ -14,5 +14,5 @@
     };
     $stmt->close();
     $conn->close();
-    header("Location: atualizarCadastro.php");
+    header("Location: atualizarArtista.php");
 ?>

@@ -25,7 +25,7 @@
                 <li><a href="cadastro.php">Registrar Músicas</a></li>
                 <li><a href="verificarRegistro.php">Verificar Playlists</a></li>
                 <li><a href="atualizarArtista.php">Atualizar Playlists</a></li>
-                <li><a href="atualizarArtista.php">Atualizar Playlists</a></li>
+                <li><a href="verificarGenero.php">Consulta por gênero</a></li>
             </ul>
         </nav>
     </header>
@@ -88,7 +88,7 @@
                 $stmt->execute();
 
                 //Exibindo a mensagem de sucesso
-                echo "<div class = 'mensagem sucesso'> Usuário cadastrado com sucesso! </div>";
+                echo "<div class = 'mensagem sucesso'> Música cadastrada com sucesso! </div>";
 
                 //Encerrar a consulta SQL e conexão com banco
                 $stmt->close();
